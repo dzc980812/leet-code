@@ -6,7 +6,9 @@
 
  * @param {number} x
  * @return {boolean}
- * 思路，因为回文数为前面是后面的反转，所以找到中间点后对前面进行截取并翻转即可
+ * 思路，两种思路
+ * 一种因为回文数反转过来还是自己本身，所以整个翻转后再与传入参数比较即可
+ * 第二种回文数前面是后面的反转，所以找到中间点后对前面进行截取并翻转即可
  * 需要注意的点是如果数字长度为偶数和数字长度为奇数时，截取位置是不同的
  */
 var isPalindrome = function (x) {
@@ -37,4 +39,12 @@ var isPalindrome1 = function (x) {
   const after = str.slice(item, str.length)
   return +front === +after
 };
-console.log(isPalindrome(1234321))
+
+// 最简单的办法，回文数反转过来与原来相等
+var isPalindrome2 = function (x) {
+  const str = (x + '').split('').reverse().join('')
+  return +str === x;
+};
+
+
+console.log(isPalindrome2(1234564321))
