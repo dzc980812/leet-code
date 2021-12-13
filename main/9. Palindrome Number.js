@@ -47,4 +47,4 @@ var isPalindrome2 = function (x) {
 };
 
 
-console.log(isPalindrome2(1234564321))
+console.log(isPalindrome2(123321))
