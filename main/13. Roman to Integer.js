@@ -52,4 +52,5 @@ var romanToInt = function (s) {
   }
   return number
 };
-console.log(romanToInt('IV'))
+
+console.log(romanToInt('IV'));
