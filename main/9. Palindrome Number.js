@@ -37,4 +37,10 @@ var isPalindrome1 = function (x) {
   const after = str.slice(item, str.length)
   return +front === +after
 };
+
+// 最简单的办法，回文数反转过来与原来相等
+var isPalindrome2 = function (x) {
+  const str = (x + '').split('').reverse().join('')
+  return +str === x;
+};
 console.log(isPalindrome(1234321))
