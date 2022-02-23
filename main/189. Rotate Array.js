@@ -19,20 +19,20 @@
 // };
 
 // 双指针
-// const revers = function (nums, left, right) {
-//   while (left < right) {
-//     let temp = nums[left];
-//     nums[left] = nums[right];
-//     nums[right] = temp;
-//     left++;
-//     right--;
-//   }
-// }
+const revers = function (nums, left, right) {
+  while (left < right) {
+    let temp = nums[left];
+    nums[left] = nums[right];
+    nums[right] = temp;
+    left++;
+    right--;
+  }
+}
 
 
-// var rotate = function (nums, k) {
-//   revers(nums, 0, nums.length - 1)
-//   revers(nums, 0, k % nums.length - 1);
-//   revers(nums, k % nums.length, nums.length - 1)
-//   return nums
-// };
+var rotate = function (nums, k) {
+  revers(nums, 0, nums.length - 1)
+  revers(nums, 0, k % nums.length - 1);
+  revers(nums, k % nums.length, nums.length - 1)
+  return nums
+};
